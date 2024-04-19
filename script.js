@@ -24,7 +24,7 @@ $(document).ready(function() {
             $('#remaining-guesses').text("Remaining guesses: " + remainingGuesses)
         } else {
             //Reveal the guessed letter
-            $("#hidden-letter").each(function(index){
+            $(".hidden-letter").each(function(index){
                 if(chosenWord[index] === Letter){
                     $(this).text(Letter)
                 }
