@@ -1,13 +1,69 @@
-body {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
-body .hidden-letter {
+.hidden-letter {
   display: inline-block;
   width: 20px;
   margin: 5px;
-  font-size: 24px;
+  font-size: 60px;
+  position: relative;
+  z-index: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-body .guessed-letters {
+
+#word-container {
+  position: relative;
+  z-index: 100;
+  top: 280px;
+  left: 10%;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: rotate(-8deg);
+}
+
+.guessed-letters {
   margin-top: 20px;
+  z-index: 100;
+  position: relative;
+}
+
+#reset-button {
+  z-index: 100;
+  position: relative;
+}
+
+#remaining-guesses {
+  z-index: 100;
+  position: relative;
+}
+
+#wireframe-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  width: 100vw;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: Persona;
+  src: url(/persona5font.ttf);
+}
+#hangmantitle {
+  font-family: Persona;
+  font-size: 120px;
+  position: fixed;
+  top: 14%;
+  right: 67%;
+  z-index: 3;
+  color: white;
+  transform: rotate(-10deg);
 }/*# sourceMappingURL=index.css.map */

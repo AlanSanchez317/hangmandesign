@@ -1,9 +1,9 @@
 $(document).ready(function() {
     //Array of words for the game
-    var words = ['rhythm', 'westmec', 'github', 'javascript', 'canes', 'coding']
+    var words = ['rhythm', 'westmec', 'github', 'javascript', 'canes', 'coding', 'hippopotamus']
 
     var chosenWord = words[Math.floor(Math.random()*words.length)];
-    var guessedWord = [];
+    var guessedLetters = [];
     var remainingGuesses = 6
 
     //Display underscores for each letter of the chosen word
