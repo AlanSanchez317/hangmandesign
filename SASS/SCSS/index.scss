@@ -23,20 +23,90 @@
     transform: rotate(-8deg);
 }
 
+#guess-container{
+    width: 900px;
+    height: fit-content;
+}
+
 .guessed-letters{
     margin-top: 20px;
     z-index: 100;
     position: relative;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    top: 580px;
+    padding-left: 30px;
 }
 
 #reset-button{
     z-index: 100;
     position: relative;
+    --b: 3px;   
+    --s: .45em; 
+    --color: #030303;
+    
+    padding: calc(1em + var(--s)) calc(1.4em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 20px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    top: 720px;
+    left : 1150px;
+
+}
+
+#hangman-drawing {
+    border: 8px solid black;
+    background-color: white;
+    width: 400px; 
+    height: 500px; 
+    position: fixed;
+    border-radius: 30px;
+    right: 300px; 
+    top: 80px; 
+    z-index: 100;
+}
+
+
+#reset-button:hover,
+#reset-button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+
+}
+
+#reset-button:active {
+  background: var(--color);
+  color: #fff;
 }
 
 #remaining-guesses{
     z-index: 100;
     position: relative;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    top: 800px;
+    padding-left: 100px;
+    
 }
 
 
@@ -70,3 +140,4 @@
     color: white;
     transform: rotate(-10deg);
 }
+
